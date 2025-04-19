@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Cormorant Garamond', serif;
+}
 
+h1, h2, h3, .heading {
+  font-family: 'Cormorant Garamond', serif;
+}
 
 .cursive {
   font-family: "Cedarville Cursive", cursive;
@@ -64,6 +73,9 @@
   display: none;
 }
 
+.mystical-font {
+  font-family: 'Cormorant Garamond', serif;
+}
 
 
 html {
