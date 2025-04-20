@@ -82,14 +82,14 @@ export default function CardSelection() {
         <motion.form onSubmit={handleSubmit} className="space-y-4" variants={containerVariants}>
           <motion.div variants={itemVariants}>
             <label className="block text-sm font-medium text-purple-300 mb-1">
-              Your Mystical Name
+              Your Initial & Last Name
             </label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="w-full p-3 rounded-xl border border-purple-300/30 text-white bg-purple-950/30 placeholder-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-400/50"
-              placeholder="Enter your true name..."
+              placeholder="Enter your Real name... "
               required
             />
           </motion.div>   

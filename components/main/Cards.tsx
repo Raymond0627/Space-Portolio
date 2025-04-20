@@ -36,6 +36,29 @@ const Cards = () => {
   const [loaded, setLoaded] = React.useState<boolean[]>(
     Array(majorArcanaCards.length).fill(false)
   );
+  const [perView, setPerView] = React.useState(5);
+
+  React.useEffect(() => {
+    const handleResize = () => {
+      // Adjust the number of visible slides based on viewport width
+      if (window.innerWidth < 768) {
+        setPerView(3);
+      } else if (window.innerWidth < 1024) {
+        setPerView(4);
+      } else {
+        setPerView(5);
+      }
+    };
+
+    // Set initial value
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+
+    // Clean up
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const [sliderRef, slider] = useKeenSlider<HTMLDivElement>({
     loop: true,
@@ -43,12 +66,17 @@ const Cards = () => {
     drag: true,
     slides: {
       origin: 'center',
-      perView: 5,
+      perView: perView,
       spacing: 0,
     },
     created(s) {
       // Load initial visible slides (middle card and adjacent ones)
-      const toLoad = [middleIndex-3,middleIndex-2, middleIndex-1, middleIndex, middleIndex+1, middleIndex+2, middleIndex+3];
+      const buffer = Math.ceil(perView / 2);
+      const toLoad = [];
+      for (let i = -buffer; i <= buffer; i++) {
+        toLoad.push(middleIndex + i);
+      }
+      
       const newLoaded = [...loaded];
       toLoad.forEach(idx => {
         const adjustedIdx = (idx + majorArcanaCards.length) % majorArcanaCards.length;
@@ -66,7 +94,12 @@ const Cards = () => {
     slideChanged(s) {
       // Lazy load images as they approach the viewport
       const current = s.track.details.rel;
-      const toLoad = [current-3, current-2, current-1, current, current+1, current+2,current+3];
+      const buffer = Math.ceil(perView / 2);
+      const toLoad = [];
+      for (let i = -buffer; i <= buffer; i++) {
+        toLoad.push(current + i);
+      }
+      
       const newLoaded = [...loaded];
       toLoad.forEach(idx => {
         const adjustedIdx = (idx + majorArcanaCards.length) % majorArcanaCards.length;
@@ -78,6 +111,20 @@ const Cards = () => {
     },
     animationEnded(s) {
       s.moveToIdx(s.track.details.abs + 5, true, animation);
+    },
+    breakpoints: {
+      "(max-width: 1024px)": {
+        slides: {
+          perView: 4,
+          spacing: 0,
+        },
+      },
+      "(max-width: 768px)": {
+        slides: {
+          perView: 3,
+          spacing: 0,
+        },
+      },
     },
   });
 

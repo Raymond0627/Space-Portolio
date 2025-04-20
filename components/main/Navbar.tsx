@@ -10,32 +10,32 @@ const cinzel = Cinzel_Decorative({
 
 const Navbar = () => {
   return (
-    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#9b44a6]/50 bg-[#2a0e6117] backdrop-blur-md z-50 px-10">
-      <div className="w-full h-full flex flex-row items-center justify-between m-auto px-[10px]">
+    <div className="w-full h-[65px] fixed top-0 shadow-lg shadow-[#9b44a6]/50 bg-[#2a0e6117] backdrop-blur-md z-50 px-5 md:px-10">
+      <div className="w-full h-full flex items-center justify-between m-auto">
         <a
           href="#about-me"
-          className="h-auto w-auto flex flex-row items-center"
+          className="flex items-center"
         >
           <Image
             src="/NavLogo.png"
             alt="logo"
-            width={70}
-            height={70}
-            className="cursor-pointer hover:animate-spin glow-effect"
+            width={50}
+            height={50}
+            className="cursor-pointer hover:animate-spin glow-effect md:w-[70px] md:h-[70px]"
           />
-       <span className="mystical-font font-bold text-4xl ml-[10px] hidden md:block text-[#d78eff] hover:text-[#f1c6e1]">
-  ORBA
-</span>
+          <span className="mystical-font font-bold text-2xl md:text-4xl ml-2 md:ml-[10px] hidden md:block text-[#d78eff] hover:text-[#f1c6e1]">
+            ORBA
+          </span>
         </a>
-        <div className="flex flex-row gap-5">
+        <div className="flex gap-3 md:gap-5">
           {Socials.map((social) => (
             <Image
               src={social.src}
               alt={social.name}
               key={social.name}
-              width={24}
-              height={24}
-              className="cursor-pointer hover:scale-110 transition-all duration-200 ease-in-out"
+              width={20}
+              height={20}
+              className="cursor-pointer hover:scale-110 transition-all duration-200 ease-in-out md:w-[24px] md:h-[24px]"
             />
           ))}
         </div>
