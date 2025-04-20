@@ -6,6 +6,7 @@ import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import CardSelection from "@/components/main/CardSelection";
 import Cards from "@/components/main/Cards";
+import MajorArcanaTitle from "@/components/sub/MajorArcane";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,6 +29,7 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
+        <MajorArcanaTitle />
         <Cards />
         <CardSelection />
             <Footer />

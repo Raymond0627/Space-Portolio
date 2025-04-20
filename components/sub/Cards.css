@@ -1,15 +1,23 @@
 .card-image {
     width: 100%;
     height: auto;
-    max-width: 200px; /* Adjust as needed */
+    max-width: 200px;
     transition: opacity 0.3s ease;
+    border-radius: 15px;
+    object-fit: contain; /* Changed from cover to contain for consistent sizing */
+    display: block;
+    backface-visibility: hidden; /* Prevents flickering during transforms */
+    transform-style: preserve-3d; /* Improves rendering performance */
+    will-change: transform; /* Optimizes for animations */
+    image-rendering: -webkit-optimize-contrast; /* Improves image quality */
+    image-rendering: crisp-edges;
   }
   
   .placeholder {
     width: 200px; /* Same as your card width */
     height: 350px; /* Adjust to match your card height */
     background-color: #f0f0f0;
-    border-radius: 10px;
+    border-radius: 15px; /* Soft edges */
   }
   
   /* Optional: Add some styling for the slider container */
@@ -18,3 +26,4 @@
     width: 100%;
     padding: 20px 0;
   }
+  

@@ -29,7 +29,7 @@ const majorArcanaCards = [
   "The World.svg",
 ];
 
-const animation = { duration: 50000, easing: (t: number) => t };
+const animation = { duration: 25000, easing: (t: number) => t };
 
 const Cards = () => {
   const middleIndex = Math.floor(majorArcanaCards.length / 2);
