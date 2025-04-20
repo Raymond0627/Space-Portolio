@@ -40,13 +40,16 @@ const StarBackground = (props: any) => {
 };
 
 const StarsCanvas = () => (
-    <div className="w-full h-auto fixed inset-0 z-[20]">
-        <Canvas camera={{position: [0, 0, 1]}}>
-        <Suspense fallback={null}>
-            <StarBackground />
-        </Suspense>
-        </Canvas>
-    </div>
+  <div className="w-full h-auto fixed inset-0 z-[0]"> {/* Changed from z-[20] to z-[0] */}
+      <Canvas 
+          camera={{position: [0, 0, 1]}}
+          style={{ pointerEvents: 'none' }} // This is the crucial fix
+      >
+          <Suspense fallback={null}>
+              <StarBackground />
+          </Suspense>
+          <Preload all />
+      </Canvas>
+  </div>
 )
-
 export default StarsCanvas;

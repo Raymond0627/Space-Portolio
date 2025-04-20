@@ -26,7 +26,7 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
-        <CardSelection id="Card-Selection" />
+        <CardSelection />
         <Footer />
       </body>
     </html>
