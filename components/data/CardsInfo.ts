@@ -1,0 +1,27 @@
+// src/data/cards.ts
+
+export const majorArcanaCards: string[] = [
+  'The Fool.svg',
+  'The Magician.svg',
+  'The High Priestess.svg',
+  'The Empress.svg',
+  'The Emperor.svg',
+  'The Hierophant.svg',
+  'The Lovers.svg',
+  'The Chariot.svg',
+  'The Strength.svg',
+  'The Hermit.svg',
+  'Wheel of Fortune.svg',
+  'The Justice.svg',
+  'The Hanged Man.svg',
+  'The Death.svg',
+  'The Temperance.svg',
+  'The Devil.svg',
+  'The Tower.svg',
+  'The Star.svg',
+  'The Moon.svg',
+  'The Sun.svg',
+  'The Judgement.svg',
+  'The World.svg',
+  'BackCard.svg',
+];

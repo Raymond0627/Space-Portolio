@@ -127,7 +127,7 @@ export default function CardSelection() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Reveal My Fortune
+              Proceed to Pick Cards
             </motion.button>
           </motion.div>
         </motion.form>

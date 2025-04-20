@@ -4,9 +4,11 @@ import "./globals.css";
 import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
-import CardSelection from "@/components/main/CardSelection";
+import CardSelection from "@/components/main/UserForm";
 import Cards from "@/components/main/Cards";
 import MajorArcanaTitle from "@/components/sub/MajorArcane";
+import ChooseCard from "@/components/main/ChooseCard";
+import CardStack from "@/components/main/ChooseCard";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -32,6 +34,7 @@ export default function RootLayout({
         <MajorArcanaTitle />
         <Cards />
         <CardSelection />
+        <CardStack/>
             <Footer />
       </body>
     </html>
