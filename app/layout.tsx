@@ -5,6 +5,8 @@ import StarsCanvas from "@/components/main/StarBackground";
 import Navbar from "@/components/main/Navbar";
 import Footer from "@/components/main/Footer";
 import CardSelection from "@/components/main/CardSelection";
+import Cards from "@/components/main/Cards";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,8 +28,9 @@ export default function RootLayout({
         <StarsCanvas />
         <Navbar />
         {children}
+        <Cards />
         <CardSelection />
-        <Footer />
+            <Footer />
       </body>
     </html>
   );

@@ -1,0 +1,46 @@
+/* components/sub/Cards.css */
+.keen-slider {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 50px; /* Add space at the top */
+    margin-bottom: 50px; /* Add space at the bottom */
+  }
+  
+  .keen-slider__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ccc;
+    padding: 50px;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 8px;
+    min-height: 200px;
+  }
+  
+  .number-slide1 {
+    background-color: #ff5733;
+  }
+  
+  .number-slide2 {
+    background-color: #33b5ff;
+  }
+  
+  .number-slide3 {
+    background-color: #4caf50;
+  }
+  
+  .number-slide4 {
+    background-color: #ffeb3b;
+  }
+  
+  .number-slide5 {
+    background-color: #9c27b0;
+  }
+  
+  .number-slide6 {
+    background-color: #ff9800;
+  }
+  
