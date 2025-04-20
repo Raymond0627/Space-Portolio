@@ -1,46 +1,28 @@
 /* components/sub/Cards.css */
 .keen-slider {
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-top: 50px; /* Add space at the top */
-    margin-bottom: 50px; /* Add space at the bottom */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0; /* Add 100px padding to the top and bottom */
+    margin: 0;
   }
   
   .keen-slider__slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ccc;
-    padding: 50px;
-    font-size: 24px;
-    color: #fff;
-    border-radius: 8px;
-    min-height: 200px;
+    min-width: 0; /* Important for tight packing */
+    width: 2in; /* Exact 2 inch width */
+    height: 3in; /* Exact 3 inch height */
+    overflow: hidden;
+    margin: 0; /* Remove any margins */
+    padding: 0; /* Remove any padding */
   }
   
-  .number-slide1 {
-    background-color: #ff5733;
-  }
-  
-  .number-slide2 {
-    background-color: #33b5ff;
-  }
-  
-  .number-slide3 {
-    background-color: #4caf50;
-  }
-  
-  .number-slide4 {
-    background-color: #ffeb3b;
-  }
-  
-  .number-slide5 {
-    background-color: #9c27b0;
-  }
-  
-  .number-slide6 {
-    background-color: #ff9800;
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Preserve aspect ratio */
+    border-radius: 4px;
   }
   
